@@ -1,0 +1,5 @@
+                colors
+        #f3f5f8 // blanc cassée 
+        #3d535f // zre9 ghame9
+        #7f00ff // move
+        #ffc0cb // pink 

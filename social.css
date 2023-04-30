@@ -1,0 +1,101 @@
+*{
+    user-select: none;
+}
+body{
+    overflow: hidden;
+    background: #7aadea;
+    height: 100ch;
+}
+.menu{
+    position: fixed;
+    top: 40px;
+    left: 40px;
+}
+input{
+    position: absolute;
+    display: none;
+}
+.btn{
+    display: flex;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    background: rgb(122, 173, 234);
+    box-shadow: -3px -3px 10px 0 rgba(255, 255, 255, 3),
+                -3px -3px 10px 0 rgba(255, 255, 255, 3);
+    align-items: center;
+    justify-content: center;
+    transition: 2s;
+}
+.btn .fa{
+    font-size: 40px;
+    color: #47668c;
+}
+.btn:first-child{
+    z-index: 1;
+}
+.btn:not(:first-child){
+    opacity: 0;
+    transition: all .45s cubic-bezier(.45,.25,.60,.90);
+    z-index: 0;
+}
+.btn:nth-child(2){top: 0; left: 0; transition-delay: 0s;}
+.btn:nth-child(3){top: 0; left: 0; transition-delay: 0.1s;}
+.btn:nth-child(4){top: 0; left: 0; transition-delay: 0.2s;}
+.btn:nth-child(5){top: 0; left: 0; transition-delay: 0.3s;}
+.btn:nth-child(6){top: 0; left: 0; transition-delay: 0.4s;}
+.btn:nth-child(7){top: 0; left: 0; transition-delay: 0.5s;}
+
+
+
+input:checked+label .btn:first-child{
+    box-shadow: inset -3px -3px 10px 0 rgba(255, 255, 255, 3),
+                inset -3px -3px 10px 0 rgba(255, 255, 255, 3);
+}
+
+input:checked+label .btn:nth-child(2){
+    left: 100px;
+    opacity: 1;
+}
+
+input:checked+label .btn:nth-child(3){
+    left: 200px;
+    opacity: 1;
+}
+
+input:checked+label .btn:nth-child(4){
+    left: 300px;
+    opacity: 1;
+}
+
+input:checked+label .btn:nth-child(5){
+    left: 400px;
+    opacity: 1;
+}
+
+input:checked+label .btn:nth-child(6){
+    left: 500px;
+    opacity: 1;
+}
+
+input:checked+label .btn:nth-child(7){
+    left: 600px;
+    opacity: 1;
+}
+
+.fa-bars, .fa-times{
+    position: absolute;
+    transition: 3s;
+}
+.fa-times{
+    opacity: 0;
+}
+.input:checked + label .fa-bars{
+    opacity: 1;
+}
+.input:checked + label .fa-times{
+    opacity: 1;
+}
